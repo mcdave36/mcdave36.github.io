@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.1/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<body>
+    <div class="player-container">
+        <div class="backdrop-filter">
+            <!-- backdrop filter dont delete -->
+        </div>
+        <div class="album-wrapper">
+          <div class="image-wrapper">
+            <img src="https://i0.wp.com/www.michigandaily.com/wp-content/uploads/2021/11/taylor.jpg?fit=1200%2C800&ssl=1" alt="">
+          </div>
+          <div class="vinyl-wrapper">
+            <img src="https://cdn.pixabay.com/photo/2012/04/13/13/23/disc-32390_1280.png" alt="">
+          </div>
+        </div>
+        <div class="song-detail-wrapper">
+            <h1 class="current-song-title">Song Title</h1>
+            <p class="current-song-artist">Taylor Swift</p>
+        </div>
+        <div class="controls-wrapper">
+
+            <!-- hidden audio controls -->
+            <audio controls id="current-song">
+                <source src="https://drive.google.com/uc?id=1OKqSGDH8aBsxqpVaPpQI4aqHdC-rMgUk" type="audio/mp3" class="hidden-audio-player">
+            </audio>
+
+            
+            <div class="time-wrapper">
+                <p class="current-time">00:00</p>
+                <p class="song-length">00:00</p>
+            </div>
+
+            <!-- custom track bar -->
+            <input type="range" value="0" id="song-progress">
+
+            <div class="buttons-wrapper">
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-circle-play" id="play-button"></i>
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore-container">
+        <h1>Explore</h1>
+
+        <ul>
+            <li onclick="toggleContent('lyrics-container')">Lyrics</li>
+            <li onclick="toggleContent ('other-albums')">Other Albums</li>
+            <li onclick="toggleContent('related-articles')">Related Artists</li>
+        </ul>
+
+        <div class="content-wrapper">
+            <div class="lyrics-container">
+                <div class="lyric-wrapper"></div>
+            </div>
+
+            <div class="other-albums hidden">
+
+            </div>
+
+            <div class="related-articles hidden">
+
+                <div class="article-container">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+    
+</body>
+</html>

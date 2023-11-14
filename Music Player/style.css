@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, san serif;
+
+  --white: #fff;
+  --black: #000;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+  
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+body{
+  width: 100%;
+  height: 155vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.pexels.com/photos/17483120/pexels-photo-17483120/free-photo-of-colorful-abstract-background-paper-composition.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -3;
+  gap: 3rem;
+}
+
+.backdrop-filter{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(58, 58, 58, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.player-container{
+  background-color: rgba(255, 255, 255, .8);
+  height: 30rem;
+  min-width: 20rem;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px .3px;
+}
+
+
+/* album section */
+
+.album-wrapper{
+    flex: 3;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* album children */
+
+.image-wrapper{
+    width: 60%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    left: 1rem;
+    border-radius: 5px;
+}
+
+.vinyl-wrapper{
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: 1rem; 
+}
+
+.image-wrapper img{
+    height: 150px;
+}
+
+.vinyl-wrapper img{
+    height: 150px;
+}
+
+/* song detail section */
+
+.song-detail-wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.song-detail-wrapper h1{
+    font-size: 1rem;
+}
+.song-detail-wrapper p{
+    font-size: .9rem;
+}
+
+.time-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+
+.time-wrapper p{
+    color: var(--black);
+    font-size: .8rem;
+}
+
+.controls-wrapper{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1rem;
+    width: 100%;
+}
+.buttons-wrapper .fa-backward-step:hover, .buttons-wrapper .fa-forward-step:hover, 
+#play-button:hover{
+    color: #940B92;
+}
+.buttons-wrapper .fa-solid{
+    font-size: 3rem;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(45deg, #632964, #91365A);
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.buttons-wrapper .fa-circle-play{
+    font-size: 5rem;
+}
+
+.buttons-wrapper .fa-circle-pause{
+    font-size: 5rem;
+}
+
+/* audio progress bar  */
+
+#current-song{
+    display: none;
+}
+
+#song-progress {
+    -webkit-appearance: none;
+    width: 90%;
+    height: .4rem;
+    background: var(--white);
+    border-radius: 1rem;
+}
+
+#song-progress::-moz-range-progress{
+    background-color: #632964;
+}
+
+#song-progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: var(--white);
+    border: 5px solid #632964;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+}
+
+/* explore container */
+
+.explore-container{
+    width: 35rem;
+    height: 30rem;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.explore-container h1{
+    flex: 1;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+ul{
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    font-size:20px;
+    margin-left: -50px;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    color: rgb(146, 146, 146);
+}
+
+li:hover{
+    color: white;
+}
+
+ul li.active {
+   color: white;
+}
+
+.content-wrapper{
+    flex: 4;
+}
+
+/* lyrics  */
+
+.lyrics-container{
+    height: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    overflow-y: scroll;
+    margin-top:-20px;
+}
+
+.lyric-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lyrics-container div p{
+    line-height: 1.6;
+    color: var(--white);
+    font-size: 1rem;
+    cursor: default;
+    user-select: none;
+}
+
+a{
+    color: var(--white);
+    text-decoration: none;
+    cursor: default;
+    user-select: none;
+}
+
+/* album  */
+
+.other-albums {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow-x: scroll;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.other-album-container{
+    height: fit-content;
+}
+
+.other-album-container > a > img {
+    height: 10rem;
+    cursor: pointer;
+
+    transition: 1s ease;
+}
+
+.album-details {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.album-details > h4 {
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.album-details > p {
+    font-size: .6rem;
+    margin-top: .3rem;
+    font-style: italic;
+}
+
+/* article  */
+
+.related-articles {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow-x: scroll;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-left: -20px;
+}
+
+.related-articles h1{
+    text-align: center;
+}
+
+.article-details > h4 {
+    margin-top: .4rem;
+    font-size: .8rem;
+    color: var(--white);
+    font-weight: 300;
+}
+
+.photo-container img{
+    height: 10rem;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}

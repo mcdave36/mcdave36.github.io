@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING CART</title>
+
+    <link rel="stylesheet" href="../assets/cart.css">
+    <!-- <script type="text/javascript" src="assets/navbar.js" defer></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+  <section class="main-container" id="home">
+
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+        <i class="fa-sharp fa-solid fa-bars" id="btn"></i>
+        <i class="fa-solid fa-xmark" id="cancel"></i>
+      </label>
+      <a href="../mp1.html"><img src="../assets/image/logo2.png"></a>
+          <ul>
+            <li><a href="../mp1.html">HOME</a></li>
+            <li><a href="../#brands">BRAND</a></li>
+            <li><a href="../pages/account.html">ACCOUNT</a></li>
+            <li><a href="../pages/promo.html">PROMO</a></li>
+            <li><a href="../pages/about.html">CONTACT US</a></li>
+            <li><a href="../pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+      </nav>
+
+      
+  
+      <section class="cart">
+        <div class="small-container">
+            <table>
+                <tr class="tab1">
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>SubTotal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../assets/image/Jordan-Item/jordan-11.png">
+                            <div><P>Jordan 11 Low concord</P>
+                                <small>Price: ₱2599.99</small>
+                                <br>
+                                <small>Size:Euro 40</small>
+                                <br>
+                                    <a href="">REMOVE</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>₱2599.99</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../assets/image/Nike-Item/nike-dunk-low-Light-Smoke-Grey2.jpg">
+                            <div><P>Nike Dunk Low Light Smoke</P>
+                                <small>Price: ₱1599.99</small>
+                                <br>
+                                <small>Size:Euro 43</small>
+                                <br>
+                                    <a href="">REMOVE</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>₱1599.99</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="../assets/image/Adidas-Item/adidas-DON-Issue-1-Amazing-Spider-Man.webp">
+                            <div><P>D.O.N Issue 1 Spider-Man</P>
+                                <small>Price: ₱2599.99</small>
+                                <br>
+                                <small>Size:Euro 42</small>
+                                <br>
+                                    <a href="">REMOVE</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>₱2599.99</td>
+                </tr>
+            </table>
+
+                <div class="total">
+                    <table>
+                        <tr>
+                            <td>SubTotal</td>
+                            <td>₱6799.97</td>
+                        </tr>
+                        <tr>
+                            <td>Same Day Delivery Fee</td>
+                            <td>₱50.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>₱6849.97</td>
+                        </tr>
+                    </table>
+                    <!-- <a href=""><button type="button">Confirms</button></a> -->
+                </div>
+                <div class="confirm">
+                  <span>Credit card<input type="checkbox"></span>
+                  <span>debit card<input type="checkbox"></span>
+                  <span>Gcash<input type="checkbox"></span>
+                  <span>COD<input type="checkbox"></span>
+                  <a href=""><button type="button">Confirm</button></a>
+                </div>
+        </div>
+        
+      </section>
+    
+      
+        <section>
+          <footer class="text-center text-white" style="background-color: #f1f1f1;">
+             
+              <div class="container pt-4">
+           
+                <section class="mb-4">
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+            
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+            
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-google"></i
+                  ></a>
+            
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+            
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+        
+                  <a
+                    class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="#!"
+                    role="button"
+                    data-mdb-ripple-color="dark"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </section>
+              
+              </div>
+          
+            
+              <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright
+                
+              </div>
+            
+        
+            </footer>
+          </section>  
+ 
+</body>
+
+</html>
